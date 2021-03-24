@@ -13,6 +13,7 @@ La pràctica ha sigut realitzada en grup format per  **Marc Ramos Bruach** i **M
 * **Covid19_WebScrapping.ipynb**: Respostes a les preguntes realitzades en l'enunciat.
 * **src/coronavirus.py**: conté la implementació de la classe que s'encarrega de generar el conjunt de dades partint de la base de dades [COVID-19 situation update worldwide](https://www.ecdc.europa.eu/en/geographical-distribution-2019-ncov-cases).
 * **src/requirements.txt**: conté les llibreries necessàries per a crear l'entorn i poder executar el codi.
+* **csv/coronavirus_data.csv**: fitxer que conté les dades exportes obtingudes de la pàgina web.
 
 ## Configuració de l'entorn
 
