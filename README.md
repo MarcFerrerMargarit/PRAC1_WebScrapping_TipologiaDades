@@ -23,7 +23,7 @@ python -m venv env
 Windows: /env/Scripts/activate.bat
 Mac Os/Linux: source /enve/bin/activate
 
-pip install -r requirements.txt
+pip install -r src/requirements.txt
 ```
 
 ### Execució del codi
