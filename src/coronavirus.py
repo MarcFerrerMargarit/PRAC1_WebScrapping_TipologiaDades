@@ -3,10 +3,13 @@ from bs4 import BeautifulSoup, re
 import pandas as pd
 import os
 
+
 class WebScrapper:
 
     def __init__(self):
-        self.data = pd.DataFrame(columns = ["Region", "Country","Sum of Cases", "Sum of Deaths", "Confirmed cases during 14-days period"])
+        self.data = pd.DataFrame(
+            columns=["Region", "Country", "Sum of Cases", "Sum of Deaths",
+                     "Confirmed cases during 14-days period"])
         self.collect_data()
 
     def collect_data(self):
@@ -24,7 +27,7 @@ class WebScrapper:
         for item in soup.select('table tr'):
             try:
                 region = item.select('td')[0].get_text()
-                if(region != "Total"):
+                if (region != "Total"):
                     if region.strip():
                         current_region = region
                     regions.append(current_region)
@@ -34,7 +37,7 @@ class WebScrapper:
                     sum_cases.append(confirmed)
                     deaths = item.select('td')[3].get_text()
                     sum_deaths.append(deaths)
-                    cases_14_days= item.select('td')[4].get_text()
+                    cases_14_days = item.select('td')[4].get_text()
                     confirmed_cases_14_days.append(cases_14_days)
             except Exception as e:
                 # raise e
@@ -43,16 +46,17 @@ class WebScrapper:
         self.data["Country"] = countries
         self.data["Sum of Cases"] = sum_cases
         self.data["Sum of Deaths"] = sum_deaths
-        self.data["Confirmed cases during 14-days period"] = confirmed_cases_14_days
+        self.data[
+            "Confirmed cases during 14-days period"] = confirmed_cases_14_days
 
     def print_data(self):
         print(self.data)
 
     def get_data(self):
         return self.data
-    
+
     def export_to_csv(self):
-        self.data.to_csv('../csv/coronavirus_data.csv', index = False)
+        self.data.to_csv('../csv/coronavirus_data.csv', index=False)
 
 # def main():
 #     webScrapper = WebScrapper()
@@ -60,4 +64,3 @@ class WebScrapper:
 
 # if __name__ == "__main__":
 #     main()
-
