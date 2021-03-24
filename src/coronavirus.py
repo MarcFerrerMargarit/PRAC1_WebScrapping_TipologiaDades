@@ -56,7 +56,7 @@ class WebScrapper:
         return self.data
 
     def export_to_csv(self):
-        self.data.to_csv('../csv/coronavirus_data.csv', index=False)
+        self.data.to_csv('csv/covid_notification_world_cases_dataset.csv', index=False)
 
 # def main():
 #     webScrapper = WebScrapper()
