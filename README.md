@@ -11,7 +11,7 @@ La pràctica ha sigut realitzada en grup format per  **Marc Ramos Bruach** i **M
 ## Fitxers i estructura
 
 * **Covid19_WebScrapping.ipynb**: Respostes a les preguntes realitzades en l'enunciat.
-* **src/coronavirus.py**: conté la implementació de la classe que s'encarrega de generar el conjunt de dades partint de la base de dades [COVID-19 situation update worldwide](https://www.ecdc.europa.eu/en/geographical-distribution-2019-ncov-cases).
+* **src/scrapper.py**: conté la implementació de la classe que s'encarrega de generar el conjunt de dades partint de la base de dades [COVID-19 situation update worldwide](https://www.ecdc.europa.eu/en/geographical-distribution-2019-ncov-cases).
 * **src/requirements.txt**: conté les llibreries necessàries per a crear l'entorn i poder executar el codi.
 * **csv/covid_notification_world_cases_dataset.csv**: fitxer que conté les dades exportes obtingudes de la pàgina web.
 
@@ -30,7 +30,7 @@ pip install -r src/requirements.txt
 ### Execució del codi
 
 ```
-python .\src\coronavirus.py
+python .\src\scrapper.py
 ```
 
 ## Asignacions tasques

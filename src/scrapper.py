@@ -46,9 +46,7 @@ class WebScrapper:
         self.data["Country"] = countries
         self.data["Sum of Cases"] = sum_cases
         self.data["Sum of Deaths"] = sum_deaths
-        self.data[
-            "Confirmed cases during 14-days period"] = confirmed_cases_14_days
-
+        self.data["Confirmed cases during 14-days period"] = confirmed_cases_14_days
     def print_data(self):
         print(self.data)
 
