@@ -62,9 +62,11 @@ class WebScrapper:
             index=False
         )
 
-# def main():
-#     webScrapper = WebScrapper()
-#     webScrapper.export_to_csv()
 
-# if __name__ == "__main__":
-#     main()
+def main():
+    webScrapper = WebScrapper()
+    webScrapper.export_to_csv()
+
+
+if __name__ == "__main__":
+    main()
