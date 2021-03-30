@@ -5,7 +5,9 @@ from bs4 import BeautifulSoup
 
 class WebScrapper:
 
+    # Init function
     def __init__(self):
+        #Create dataframe for the dataset
         self.data = pd.DataFrame(
             columns=["Region", "Country", "Sum of Cases", "Sum of Deaths",
                      "Confirmed cases during 14-days period"]
@@ -16,6 +18,7 @@ class WebScrapper:
         }
         self.collect_data()
 
+    # Function to get the data by scrapping
     def collect_data(self):
         response = requests.get(self.url, headers=self.headers)
         soup = BeautifulSoup(response.content, 'lxml')
@@ -25,6 +28,7 @@ class WebScrapper:
         sum_cases = []
         sum_deaths = []
         confirmed_cases_14_days = []
+        # Check the table to get the data
         for item in soup.select("table tr"):
             try:
                 region = item.select("td")[0].get_text()
@@ -43,6 +47,7 @@ class WebScrapper:
             except Exception as e:
                 # raise e
                 print('')
+        # Set up the dataframe with data
         self.data["Region"] = regions
         self.data["Country"] = countries
         self.data["Sum of Cases"] = sum_cases
@@ -50,12 +55,15 @@ class WebScrapper:
         self.data[
             "Confirmed cases during 14-days period"] = confirmed_cases_14_days
 
+    # Function for printing dataset
     def print_data(self):
         print(self.data)
 
+    # Return dataframe containing the dataset
     def get_data(self):
         return self.data
 
+    # Export the dataframe to csv
     def export_to_csv(self):
         self.data.to_csv(
             "csv/covid_notification_world_cases_dataset.csv",
@@ -63,6 +71,7 @@ class WebScrapper:
         )
 
 
+# Main function
 def main():
     webScrapper = WebScrapper()
     webScrapper.export_to_csv()
