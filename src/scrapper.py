@@ -61,6 +61,7 @@ class WebScrapper:
 
     # Return dataframe containing the dataset
     def get_data(self):
+        self.data = pd.read_csv("csv/covid_notification_world_cases_dataset.csv")
         return self.data
 
     # Export the dataframe to csv
