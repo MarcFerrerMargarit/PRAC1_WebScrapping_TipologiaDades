@@ -14,6 +14,7 @@ La pràctica ha sigut realitzada en grup format per  **Marc Ramos Bruach** i **M
 * **src/scrapper.py**: conté la implementació de la classe que s'encarrega de generar el conjunt de dades partint de la base de dades [COVID-19 situation update worldwide](https://www.ecdc.europa.eu/en/geographical-distribution-2019-ncov-cases).
 * **src/requirements.txt**: conté les llibreries necessàries per a crear l'entorn i poder executar el codi.
 * **csv/covid_notification_world_cases_dataset.csv**: fitxer que conté les dades exportes obtingudes de la pàgina web.
+* **pdf/Covid19_WebScrapping.pdf**: PDF amb els preguntes de l'enunciat respostes.
 
 ## Configuració de l'entorn
 
@@ -32,11 +33,3 @@ pip install -r src/requirements.txt
 ```
 python .\src\scrapper.py
 ```
-
-## Asignacions tasques
-Marc R:
- - 1, 6, 7, 8
-
-
-Marc F:
- - 2, 3 ,4, 5
