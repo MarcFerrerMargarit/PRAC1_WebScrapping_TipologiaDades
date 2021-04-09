@@ -1,5 +1,7 @@
 # Práctica 1: Web scraping
 
+[![DOI](https://zenodo.org/badge/350809539.svg)](https://zenodo.org/badge/latestdoi/350809539)
+
 ## Descripció
 
 Aquesta és la primera pràctica de l'assignatura _Tipologia i cicle de vida de les dades_ del Màster en Ciència de Dades de la Universitat Oberta de Catalunya. L'objectiu d'aquesta pràctica és a aprendre a identificar les dades rellevants per un projecte analític i usar les eines d'extracció de dades. Per això s'utilitzaran tècniques de Web Scrapping per tal de poder obtenir i analitzar la informació.
